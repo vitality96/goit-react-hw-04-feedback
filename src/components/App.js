@@ -33,8 +33,8 @@ export default function App() {
 
     const total = good + neutral + bad;
 
-        const countPositiveFeedbackPercentage = () => {
-    return Math.round((good / total) * 100) || 0;
+    const countPositiveFeedbackPercentage = () => {
+        return Math.round((good / total) * 100) || 0;
     };
 
     const options = { good, neutral, bad };
@@ -43,7 +43,7 @@ export default function App() {
             <>
                 <Section title="Please leave feedback">
                     <div style={{display: "flex", justifyContent: "center"}}>
-                        <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
+                        <FeedbackOptions options={Object.keys(options)} onLeaveFeedback={onLeaveFeedback} />
                     </div>
                 </Section>
                 <Section title="Statistics">
